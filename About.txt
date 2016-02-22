@@ -1,0 +1,71 @@
+>  Help file supplements the Reverse DNA Sequence Package (see USABILITY for required files)
+>  For updates or bug fixes   <
+>  contact Ryan Petrosky      <
+>  petrosr2@students.wwu.edu  <
+
+
+Convert a 99999_SEQ_Final_yyyy-mm-dd.txt file into the RAW format
+
+- BASICS -
+
+	If you have a desktop shortcut to the program, click it and follow prompts.
+
+	If not, navigate to your DNASequence folder, double click Run.jar and follow prompts.
+
+- INPUT -
+	
+	The user is prompted for the file name.
+
+	Assumptions:
+		The file has not been tampered with.
+		The file is the standard type: 99999_SEQ_Final_yyyy-mm-dd.txt
+		The file matches the Patent Office format in the
+		PatentIn program as at 5 November 2014. If this
+		format changes, contact Ryan Petrosky.
+
+- POSSIBLE RESULTS -
+
+	A. UNABLE TO ACCEPT INPUT FORMAT
+		The input file contains an unaccounted for format. Some sequences
+		may be partially present in the output file. The output file will
+		contain errors. If the input file has been tampered with, please
+		retry with an unaltered version. If the patent office layout has
+		changed, please contact Ryan Petrosky to update this program.
+
+	B. SUCCESS
+		The output file will be saved to the same folder the input file
+		resides, with the modification "_SEQ_RAW_madebyryan.txt" added
+		to the input file name.
+
+	C. NO INPUT FILE RECIEVED
+		An input file was not detected.
+
+	D. RAW FILE ALREADY IN EXISTENCE
+		The generic output name created by adding "_SEQ_RAW_madebyryan.txt"
+		to the input file is a pre-existing file. The program is designed
+		not to override	pre-existing files.
+
+	E. SEQUENCES NOT READABLE
+		The program could not locate field <160> indicating the number of
+		sequences in the file, causing zero sequences to be read. No output
+		file created.
+
+- USABILITY -
+	
+	This program was tested using the Java JRE 1.8.x_xx and found acceptable. Though 
+	there will exist some degree of backward compatibility, none is guaranteed with
+	older JRE versions.
+	
+	The DNASequence folder must contain these files for proper functionality:
+		ReverseMain.java
+		ReverseMain.class
+		ReverseMain$1.class
+		ReverseSequence.java
+		ReverseSequence.class
+		Sequence.java
+		Sequence.class
+		Manifest.txt
+		Run.jar
+
+
+[END]
